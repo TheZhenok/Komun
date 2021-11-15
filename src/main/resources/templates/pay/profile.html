@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+<body>
+    <div th:insert="~{mein :: Navig}"></div>
+    <form method="post" action="/pay" enctype="multipart/form-data">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title" style="font-weight: bold">Электроинергия: </h4>
+                <p class="card-text" th:text="${el}"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title" style="font-weight: bold">Горячия вода: </h4>
+                <p class="card-text" th:text="${ho}"></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title" style="font-weight: bold">Холодная вода: </h4>
+                <p class="card-text" th:text="${co}"></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title" style="font-weight: bold">Вывоз мусора: </h4>
+                <p class="card-text" th:text="${tr}"></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title" style="font-weight: bold">Отопление: </h4>
+                <p class="card-text" th:text="${he}"></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title" style="font-weight: bold">Конолизация: </h4>
+                <p class="card-text" th:text="${wtr}"></p>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Оплатить</button>
+        </div>
+    </form>
+</body>
+</html>
